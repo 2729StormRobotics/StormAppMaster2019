@@ -1,0 +1,302 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fillable_area"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="25dip"
+    android:layout_marginTop="75dip"
+    android:layout_marginRight="25dip"
+    android:layout_marginBottom="75dip"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <!--<TableLayout
+        android:id="@+id/table_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/> [not in use] -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+
+            android:padding="0dp">
+
+            <EditText
+                android:id="@+id/editSearchNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter Team #"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="24sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSearchTmDt"
+            style="?android:buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_radio_button_orange"
+            android:text="SEARCH"
+
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp" />
+
+        android:textColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtTopView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:fontFamily="sans-serif" />
+
+    <TextView
+        android:id="@+id/txtSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dip"
+        android:layout_weight="1"
+        android:textSize="24sp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="100">
+
+        <LinearLayout
+            android:id="@+id/fillable_area2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TableLayout
+                android:id="@+id/fixed_column"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </TableLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TableLayout
+                    android:id="@+id/scrollable_part"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:layout_weight="0" />
+
+                    android:layout_height="match_parent" />
+
+
+                </TableLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TeamData">
+
+        &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Team Number"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/buttonSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Search" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/table_header"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/fillable_area"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TableLayout
+                            android:id="@+id/fixed_column"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TableLayout
+                                android:id="@+id/scrollable_part"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" />
+                        </HorizontalScrollView>
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/table_header"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/fillable_area"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TableLayout
+                            android:id="@+id/fixed_column"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TableLayout
+                                android:id="@+id/scrollable_part"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" />
+                        </HorizontalScrollView>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/table_header"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/fillable_area"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TableLayout
+                            android:id="@+id/fixed_column"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TableLayout
+                                android:id="@+id/scrollable_part"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" />
+                        </HorizontalScrollView>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>-->
+
+
+
+

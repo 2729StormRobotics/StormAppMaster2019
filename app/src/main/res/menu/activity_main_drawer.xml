@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/btnHome"
+            android:title="Home" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/btnQR"
+            android:title="Scan QR" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/btnTeamData"
+            android:title="Team Data"
+            />
+        <item
+            android:id="@+id/btnMatchData"
+            android:title="Match Data" />
+        <item
+            android:id="@+id/btnSortTeams"
+            android:title="Sort Teams" />
+
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/btnTools"
+            android:title="Database - Tools" />
+        <item
+            android:id="@+id/btnClear"
+            android:title="Database - Clear" />
+        <item
+            android:id="@+id/btnDump"
+            android:title="Database - Dump" />
+        <item
+            android:id="@+id/btnPrivacyPolicy"
+            android:title="Privacy Policy"/>
+
+    </group>
+
+</menu>

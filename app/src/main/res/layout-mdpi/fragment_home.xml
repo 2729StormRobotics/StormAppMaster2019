@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dip"
+        android:layout_marginTop="75dip"
+        android:layout_marginRight="25dip"
+        android:layout_marginBottom="75dip"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageStormLogo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="stormLogo"
+            android:padding="12.5dip"
+            android:src="@drawable/stormlogo_main"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Welcome to the Storm Robotics Scouting Master App! Swipe Right To Begin!"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+    </LinearLayout>
+</FrameLayout>

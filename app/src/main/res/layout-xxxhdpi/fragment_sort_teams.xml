@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fillable_area_sort_biggie"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="20dip"
+    android:layout_marginTop="60dip"
+    android:layout_marginRight="20dip"
+    android:layout_marginBottom="60dip"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/txtSort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:text="Pick a category and column to sort teams"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:typeface="sans"
+                app:fontFamily="sans-serif" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:minHeight="50dp" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rdogSortBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdoTeam"
+                style="?android:buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button_orange"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:minHeight="50dp"
+                android:text="Team #"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rdoMax"
+                style="?android:buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button_red"
+                android:button="@android:color/transparent"
+                android:minHeight="50dp"
+                android:text="Max"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rdoAvg"
+                style="?android:buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button_red"
+                android:button="@android:color/transparent"
+                android:minHeight="50dp"
+                android:text="Avg"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="100">
+
+        <LinearLayout
+            android:id="@+id/fillable_area_sort"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TableLayout
+                android:id="@+id/scrollable_part_sort"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

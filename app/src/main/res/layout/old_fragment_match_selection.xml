@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.matchSelection">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dip"
+        android:layout_marginTop="75dip"
+        android:layout_marginRight="25dip"
+        android:layout_marginBottom="75dip"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:orientation="horizontal">
+
+            <SearchView
+                android:id="@+id/searchMatch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="start" />
+
+            <Button
+                android:id="@+id/btnSearchMatch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/red"
+                android:fontFamily="sans-serif"
+                android:text="Search"
+                android:textSize="24sp"
+                android:typeface="sans" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TableLayout
+                android:id="@+id/tableMatch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TableRow
+                    android:id="@+id/rowTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/nameTeam"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:text="Team"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/team1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/team2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/team3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/team4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/team5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/team6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/rowAlliance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/nameAlliance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:text="Alliance"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/alliance1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/alliance2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/alliance3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/alliance4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/alliance5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/alliance6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/rowHABLVL2Descent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/nameHABLVL2Descent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:text="LVL2 Descent"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/HABLVL2Descent1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/HABLVL2Descent2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/HABLVL2Descent3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/HABLVL2Descent4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/HABLVL2Descent5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/HABLVL2Descent6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/rowCargo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/nameCargo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:text="Cargo"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cargo1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cargo2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cargo3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cargo4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cargo5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cargo6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/rowHatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/nameHatch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:text="Hatch"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/hatch1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/hatch2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/hatch3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/hatch4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/hatch5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/hatch6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/rowCycTimesLVL1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/nameCycTimesLVL1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:text="Cycle Times LVL1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cycTimesLVL1_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cycTimesLVL1_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cycTimesLVL1_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cycTimesLVL1_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cycTimesLVL1_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cycTimesLVL1_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/rowCycTimesLVLHigh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/nameCycTimesLVLHigh"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:text="Cycle Times High LVLs"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cycTimesLVLHigh1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cycTimesLVLHigh2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cycTimesLVLHigh3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cycTimesLVLHigh4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cycTimesLVLHigh5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cycTimesLVLHigh6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/rowCargoScored"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/nameCargoScored"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:text="Cargo Scored"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cargoScored1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cargoScored2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cargoScored3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cargoScored4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cargoScored5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/cargoScored6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/rowHatchScored"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/nameHatchScored"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:text="Hatch Scored"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/hatchScored1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/hatchScored2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/hatchScored3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/hatchScored4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/hatchScored5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/hatchScored6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:typeface="sans"
+                        app:fontFamily="sans-serif" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
