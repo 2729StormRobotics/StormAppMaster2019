@@ -1,0 +1,30 @@
+language: android
+addons:
+  sonarcloud:
+    organization: storm-robotics-2729-github
+android:
+  components:
+  - tools
+  - platform-tools
+  - build-tools-28.0.3
+  - android-27
+  - extra-google-google_play_services
+  - extra-google-m2repository
+  - extra-android-m2repository
+  - sys-img-x86-android-27
+  - sys-img-armeabi-v7a-android-19
+before_cache:
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+  - "$HOME/.android/build-cache"
+  - "$HOME/.sonar/cache/"
+notifications:
+  slack:
+    secure: F16k38fcdspbg+2qvX3PfzaruOnmP60oBiz9Bg5vEIW8u3SVU0MI/3XtqJ3r1OEFM1D8IQ7PzCe9/Tbr1IIWaRY5BhbbQaW72tI2KAvXZF1Z/A2xQDgFCP+90PH7bjCpFkXihqb0mX5rlMLgXO5T3h/lrhAFXL3SKy0PV6hkK/Hs9v90pMmM9ffzlAy6V5MJrZ5BOzAVibCRd8MNFVxCdoqweX70U9jd56ueJgg5NVN0ndwFExvYodT4OG2zkDA1QH0pR+kFKhEeB98z7ogIlm31ZBBf35X1ttZ1xQBSGW4VXF0VzZIoiAjhCpLih2m5Xsv1OJxB1khotjPi5EsV1OUPY/Pe19CUH7d3XooDixZqMGmY1Hu9ZHyRCgXu2wR9+poft4EgDWBqWr61LV+DyKK7VjTXi46S6J65lKt2YSa8UivVdk5QOqPh7Jfh4T0tBPYdfcoUvZZm4HLaCxGjAlj9Uy70aPeFx8OJP0QQAcqstMbx/cWBDCEPB7uvaO+grB1K+NjylpUZV5fvxuN8j0/kvdShVF+RmOcWlm/q+Xz6+1SYH8yRsnjhrYFKRrR0MGMNQMQGukC2TlRntaht/nrZL80mXW0NbG6qqWKm9V5Ax9ppL9JxkI8d7DPeOsFrxX9vNvgf3yB5pFXi65dLzgpKzpoxBcCmicSp43f7xOI=
+env:
+  global:
+    secure: fI7Qw4W7M9ETM1mHmcllKi2CDRGetyz1v/zyvOb5yWzvqRgW/eo+Yi5x70pRg9vd5sJTSizKwH6gwS+PGA+wHv7GV5/camWJyusY35rTpyb0aaZxGTWAKSQj8QmqotGcJsM6UHofuVzHsvFkBUhNPqir9iuhEkFOZ5yQ5Et1e58pPb3qNKToqNj/wFxi3MTnaC2PwQDwWb/YqqTN4ZgbbVS4ok+Cs3UDmPVuEIMI5Ku28DL8LzgMUvExAE4FHOAfzpPZTj1HcjJQj1Mps9zuI7PTjWMaNCMnw3t8hvi9AvdrhH5aNjfFMltfHA+1D1GJp5H+phtlmPlTQyuAWdJx02xc2Gnm47wFaBkkFeePZBwSmosGrapZ5bfogGYtzTICfq8vpIGbiy+8kcGnPThKw8yKlDyOk5noxUDaW3MrO6L8/+HdRqp/5ou1ghBFk0zS3NJ9We/XDFrbAATUkrZevSN6IEbjbmNspSFHhP69hSgWQ88R2nv4lZhKLsPUNoHSm8ZvV5IkSggVJSRkjAHe5r7akHHra8dOzOr2pRHFqZVkUNZPlH/AndmhAZFOlB1y4HwWDAzr17Z9Q6Ee7F8iMNNZ1QwAS+k5xBf9bNPcIbY1BLiUf2jRZ73ZQ96y1eUH6TOucGsW60L5HoEvT+I130aXogIutQCMtFh9p2pYJAM=
