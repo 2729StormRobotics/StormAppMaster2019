@@ -2,17 +2,19 @@ language: android
 addons:
   sonarcloud:
     organization: storm-robotics-2729-github
+    token:
+      secure: Ir8wORWL+dMZueRdKIuMlAo9mbSsXYRu+lksJ6zm1X00/dnpSUWktQRX4eXK2rSGreBrjvZPEmQAeggOU5y0ogql4FMBR4bIhaFvEbYhBwoCI6rQqabwYo6Xfk+OVh0GRR+FOq60njs1kfw7mlXMtcabqZI16P8kkTg+a8lJqZmwz480PNj12bCww44t21FLxMyr+hRP1klimLvZ4rSvJXy6Sokmx8cRvFEjV3x3Lmm1vKwBYVbqR4FOASCmI6sL3+vh5Kvqq+3Why1Emwm5OO174nOl5rgPklgKl6g+RBoj72CS5APp4sT84FTDtLUDdmuMCLvMfhNjhb7yze6OHri0cBEG8XhtcNd+d5qYnnz1xm9qwfbyjFWv9woB3Bx2VHXS9GzQ+1La2wft6NVWI9PLaC6O5kRJVtmcdb7EDnAn/3j7dCaggsK44HVaK67YAlYWJcECG/pw84/B1OM7ft+sugl6nRLedS+0XNcjATCeZhGjA1otH4kxjXmusqTlVJg30FvuczaIJXMjXsFtma7G4/Eixc67AKjdPDrz7uuSoOiDKsJNGZda3qxcDocVR6JSjJFiumZpLxzS0EIeRD/pmQhhQUcV9cImnf2GUezuBfbs8WSqivYlJgsDSa1ULevNs//ywCqBZVZqsRzoetP671Csrf0gFStMX22VfEM=
 android:
   components:
-  - tools
-  - platform-tools
-  - build-tools-28.0.3
-  - android-19
-  - android-28
-  - extra-google-google_play_services
-  - extra-google-m2repository
-  - extra-android-m2repository
-  - sys-img-armeabi-v7a-android-19
+    - tools
+    - platform-tools
+    - build-tools-28.0.3
+    - android-19
+    - android-28
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - sys-img-armeabi-v7a-android-19
 git:
   depth: false
 before_script:
@@ -21,15 +23,18 @@ before_script:
   - emulator -avd test -no-audio -no-window &
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
+script:
+  - ./gradlew build connectedCheck
+  - sonar-scanner
 before_cache:
-- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-  - "$HOME/.gradle/caches/"
-  - "$HOME/.gradle/wrapper/"
-  - "$HOME/.android/build-cache"
-  - "$HOME/.sonar/cache/"
+    - "$HOME/.gradle/caches/"
+    - "$HOME/.gradle/wrapper/"
+    - "$HOME/.android/build-cache"
+    - "$HOME/.sonar/cache/"
 notifications:
   slack:
     secure: F16k38fcdspbg+2qvX3PfzaruOnmP60oBiz9Bg5vEIW8u3SVU0MI/3XtqJ3r1OEFM1D8IQ7PzCe9/Tbr1IIWaRY5BhbbQaW72tI2KAvXZF1Z/A2xQDgFCP+90PH7bjCpFkXihqb0mX5rlMLgXO5T3h/lrhAFXL3SKy0PV6hkK/Hs9v90pMmM9ffzlAy6V5MJrZ5BOzAVibCRd8MNFVxCdoqweX70U9jd56ueJgg5NVN0ndwFExvYodT4OG2zkDA1QH0pR+kFKhEeB98z7ogIlm31ZBBf35X1ttZ1xQBSGW4VXF0VzZIoiAjhCpLih2m5Xsv1OJxB1khotjPi5EsV1OUPY/Pe19CUH7d3XooDixZqMGmY1Hu9ZHyRCgXu2wR9+poft4EgDWBqWr61LV+DyKK7VjTXi46S6J65lKt2YSa8UivVdk5QOqPh7Jfh4T0tBPYdfcoUvZZm4HLaCxGjAlj9Uy70aPeFx8OJP0QQAcqstMbx/cWBDCEPB7uvaO+grB1K+NjylpUZV5fvxuN8j0/kvdShVF+RmOcWlm/q+Xz6+1SYH8yRsnjhrYFKRrR0MGMNQMQGukC2TlRntaht/nrZL80mXW0NbG6qqWKm9V5Ax9ppL9JxkI8d7DPeOsFrxX9vNvgf3yB5pFXi65dLzgpKzpoxBcCmicSp43f7xOI=
